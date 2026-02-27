@@ -14,8 +14,15 @@ const Projects = () => {
         {
             title: "Univ. Bakrie Library App",
             description: "Aplikasi manajemen perpustakaan digital end-to-end (Skripsi). Menangani sirkulasi peminjaman buku dan manajemen inventaris database secara real-time dan efisien.",
-            tech: ["Kotlin", "MySQL", "Material Design", "Room DB"],
+            tech: ["Kotlin", "MySQL", "Material Design", "MVVM"],
             github: "https://github.com/ilhamrachmadhani/Aplikasi-Perpustakaan-Smart-Library-.git",
+            demo: "#"
+        },
+        {
+            title: "Univ. Bakrie Library App",
+            description: "Filter Wilayah Indonesia adalah aplikasi web yang memungkinkan pengguna menyaring data wilayah secara bertingkat mulai dari Provinsi, Kota/Kabupaten, hingga Kecamatan. Aplikasi ini dirancang dengan sistem filter dinamis dan pengelolaan state yang konsisten agar tetap stabil saat halaman di-refresh. Fokus utama pengembangan berada pada pengalaman pengguna yang bersih, responsif, dan terstruktur.",
+            tech: ["HTML", "CSS", "ReactJS",],
+            github: "https://github.com/ilhamrachmadhani/filter-wilayah",
             demo: "#"
         },
     ];
