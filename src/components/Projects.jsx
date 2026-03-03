@@ -1,29 +1,37 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Github, ExternalLink } from 'lucide-react';
+import { ExpandableCard } from "../components/ui/expandable-card";
+import nutriscanImg from "../assets/nutriscan.png";
+import perpustakaanImg from "../assets/perpustkaan.png";
+import filterWilayahImg from "../assets/filter-wilayah.png";
+
 
 const Projects = () => {
     const projects = [
         {
             title: "NutriScan (Bangkit Capstone)",
-            description: "Aplikasi Android pelacak nutrisi cerdas yang terintegrasi dengan Machine Learning untuk identifikasi buah dengan akurasi 85%. Dibangun menggunakan Clean Architecture untuk skalabilitas.",
+            description: "Overview\nThe Fruit Identification and Calorie Estimation System is a mobile application designed to help users identify fruits and estimate their caloric content using image analysis. Leveraging advanced machine learning technologies like Convolutional Neural Networks (CNN) and cloud-based infrastructure, this app offers a seamless and accurate way to track dietary information and promote healthier eating habits.\n\nFeatures\nFruit Recognition: Identify a wide variety of fruits through the camera or image upload.\nCaloric Estimation: Estimate caloric content based on the type and quantity of the fruit.\nCloud Integration: Efficiently process and store data using Google Cloud Platform (GCP).\nUser-Friendly Interface: Simple and intuitive app design for ease of use.\nMobile Accessibility: Native Android app built with Kotlin.\nHow It Works\nImage Input: Users upload an image of a fruit or take a photo directly within the app.\nFruit Recognition: The app utilizes a CNN model to classify the fruit based on features like shape, color, and texture.\nCalorie Estimation: The app retrieves the caloric value of the identified fruit using preloaded nutritional data.\nResults Display: Nutritional information, including calories, is displayed to the user.\nTechnology Stack\nMachine Learning\nTools/IDEs: Google Colab, Jupyter Notebook\nLibraries: TensorFlow, Keras, OpenCV, NumPy, Pandas, Matplotlib\nFrameworks: Convolutional Neural Networks (CNN)\nCloud Services\nPlatform: Google Cloud Platform (GCP)\nTechnologies: Firebase, Cloud Functions, Google Cloud Storage\nMobile Development\nTools/IDEs: Android Studio, Figma\nLibraries: Retrofit\nLanguages: Kotlin",
             tech: ["Kotlin", "MVVM", "TensorFlow Lite", "Retrofit"],
             github: "https://github.com/Capstone-product/NutriScan.git",
-            demo: "#"
+            demo: "#",
+            image: nutriscanImg
         },
         {
             title: "Univ. Bakrie Library App",
-            description: "Aplikasi manajemen perpustakaan digital end-to-end (Skripsi). Menangani sirkulasi peminjaman buku dan manajemen inventaris database secara real-time dan efisien.",
+            description: "📚 Smart Library App (SLiMS Integrated)\nSmart Library adalah aplikasi perpustakaan mobile berbasis Android yang terintegrasi secara real-time dengan sistem manajemen perpustakaan SLiMS 9 Bulian (Senayan Library Management System).\n\nAplikasi ini dirancang untuk memudahkan mahasiswa dan dosen dalam mencari, meminjam, dan membaca buku (fisik maupun digital) dengan fitur manajemen stok cerdas dan keamanan konten digital.\n\n✨ Fitur Utama\n\n🔐 Otentikasi & Profil\nLogin Member: Terintegrasi dengan database anggota SLiMS (ID & Password).\n\nEdit Profil: Mengubah nama, email, dan foto profil yang langsung tersinkronisasi ke server.\n\nAuto-Logout: Fitur keamanan yang otomatis mengeluarkan akun jika tidak aktif selama periode tertentu.\n\n📖 Manajemen Koleksi & E-Book\nKatalog Buku: Menampilkan koleksi buku terbaru dengan status ketersediaan real-time.\nPencarian Cerdas: Mencari buku berdasarkan judul atau pengarang.\nSmart Availability Logic:\nJika stok tersedia: Tombol "Pinjam Buku".\n\nJika stok habis: Tombol otomatis berubah menjadi "Masuk Antrian".\n\nSecure E-Book Reader:\nMembaca PDF langsung di dalam aplikasi (Internal Viewer).\n\nWatermark Dinamis: Overlay tulisan "Milik Universitas" di atas PDF untuk mencegah pembajakan/screenshot.\n\nAnti-Download: File PDF tidak bisa diunduh ke penyimpanan lokal perangkat.\n\n🔄 Sirkulasi & Transaksi\nPeminjaman Mandiri: Proses peminjaman buku fisik dan digital melalui aplikasi.\n\nSistem Antrian (Queue): Masuk ke daftar tunggu (waiting list) jika buku sedang dipinjam semua.\n\nPengembalian Buku: Fitur untuk mengembalikan buku digital/fisik.\n\nRiwayat: Melihat histori peminjaman yang sudah selesai/dikembalikan.\n\n🔔 Notifikasi & UX\nPengingat Jatuh Tempo: Notifikasi otomatis H-1 sebelum tanggal pengembalian (menggunakan WorkManager).\n\nDark Mode: Dukungan tema gelap untuk kenyamanan mata.\n\nMulti-Bahasa: Mendukung Bahasa Indonesia dan Inggris.\n\nBookmark: Menyimpan buku favorit ke daftar pribadi.\n\n🛠️ Teknologi yang Digunakan\nMobile (Android)\nBahasa: Kotlin\nArsitektur: MVVM (Model-View-ViewModel) + Repository Pattern\nUI Toolkit: XML Layout, Material Design Components\nNetworking: Retrofit2 + Gson\nConcurrency: Coroutines & Flow\nImage Loading: Glide & Coil\nPDF Engine: AndroidPdfViewer\nBackground Task: WorkManager (untuk notifikasi)\nLocal Storage: SharedPreferences (Session Management)\nBackend (API)\nBahasa: PHP (Native/Vanilla)\nDatabase: MySQL (Database SLiMS 9)\nRespon: JSON Format",
             tech: ["Kotlin", "MySQL", "Material Design", "MVVM"],
             github: "https://github.com/ilhamrachmadhani/Aplikasi-Perpustakaan-Smart-Library-.git",
-            demo: "#"
+            demo: "#",
+            image: perpustakaanImg
         },
         {
             title: "Website Filter Wilayah",
             description: "Filter Wilayah Indonesia adalah aplikasi web yang memungkinkan pengguna menyaring data wilayah secara bertingkat mulai dari Provinsi, Kota/Kabupaten, hingga Kecamatan. Aplikasi ini dirancang dengan sistem filter dinamis dan pengelolaan state yang konsisten agar tetap stabil saat halaman di-refresh. Fokus utama pengembangan berada pada pengalaman pengguna yang bersih, responsif, dan terstruktur.",
             tech: ["HTML", "CSS", "ReactJS",],
             github: "https://github.com/ilhamrachmadhani/filter-wilayah",
-            demo: "#"
+            demo: "#",
+            image: filterWilayahImg
         },
     ];
 
@@ -35,39 +43,26 @@ const Projects = () => {
                         Selected Works
                     </h2>
                 </div>
-                <div className="md:col-span-8 space-y-12">
+
+                <div className="md:col-span-8 grid grid-cols-2 gap-4">
                     {projects.map((project, index) => (
-                        <motion.div
-                            key={project.title}
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.5, delay: index * 0.1 }}
-                            className="group relative bg-gray-50 dark:bg-zinc-800/50 rounded-lg p-6 hover:bg-white dark:hover:bg-zinc-800 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 border border-transparent hover:border-gray-100 dark:hover:border-zinc-700"
+                        <ExpandableCard
+                            key={index}
+                            title={project.title}
+                            src={project.image}
+                            description={project.tech.join(" • ")}
                         >
-                            <div className="flex flex-col md:flex-row md:items-start justify-between gap-4">
-                                <div>
-                                    <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
-                                        {project.title}
-                                    </h3>
-                                    <p className="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">
-                                        {project.description}
-                                    </p>
-                                    <div className="flex flex-wrap gap-2 mb-6">
-                                        {project.tech.map(t => (
-                                            <span key={t} className="text-xs font-medium text-gray-500 dark:text-gray-500 font-mono">
-                                                {t}
-                                            </span>
-                                        ))}
-                                    </div>
-                                </div>
-                                <div className="flex gap-4">
-                                    <a href={project.github} className="text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors p-2 hover:bg-gray-100 dark:hover:bg-zinc-700 rounded-full" aria-label="View Source">
-                                        <Github size={20} />
+                            <div className="flex flex-col gap-4 ">
+                                <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
+                                    {project.description}
+                                </p>
+                                <div className="flex items-center gap-4 mt-4">
+                                    <a href={project.github} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm font-medium text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors">
+                                        <Github className="w-4 h-4" /> Repository
                                     </a>
                                 </div>
                             </div>
-                        </motion.div>
+                        </ExpandableCard>
                     ))}
                 </div>
             </div>
