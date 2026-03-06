@@ -3,8 +3,10 @@ import { motion } from 'framer-motion';
 import { Github, ExternalLink } from 'lucide-react';
 import { ExpandableCard } from "../components/ui/expandable-card";
 import nutriscanImg from "../assets/nutriscan.png";
-import perpustakaanImg from "../assets/perpustkaan.png";
+import perpustakaanImg from "../assets/perpustakaan.png";
 import filterWilayahImg from "../assets/filter-wilayah.png";
+import streamflixImg from "../assets/streamflix.png";
+import portofolioImg from "../assets/portfolio.png";
 
 
 const Projects = () => {
@@ -30,8 +32,24 @@ const Projects = () => {
             description: "Filter Wilayah Indonesia adalah aplikasi web yang memungkinkan pengguna menyaring data wilayah secara bertingkat mulai dari Provinsi, Kota/Kabupaten, hingga Kecamatan. Aplikasi ini dirancang dengan sistem filter dinamis dan pengelolaan state yang konsisten agar tetap stabil saat halaman di-refresh. Fokus utama pengembangan berada pada pengalaman pengguna yang bersih, responsif, dan terstruktur.",
             tech: ["HTML", "CSS", "ReactJS",],
             github: "https://github.com/ilhamrachmadhani/filter-wilayah",
-            demo: "#",
+            demo: "https://filterwilayah.netlify.app/",
             image: filterWilayahImg
+        },
+        {
+            title: "Website Film StreamFlix",
+            description: "Sebuah aplikasi pencarian film berbasis web yang responsif, dibangun menggunakan React.js dan Vite. Aplikasi ini memanfaatkan OMDb API untuk menampilkan daftar film berdasarkan kata kunci pencarian dan menyajikan detail komprehensif untuk setiap film.✨ Fitur Utama Pencarian Real-time: Mencari judul film secara dinamis menggunakan OMDb API. Tampilan Detail Film: Menampilkan pop-up (modal) berisi informasi lengkap film (sinopsis, rating IMDb, sutradara, aktor, genre, dll). Desain Responsif: Antarmuka yang dioptimalkan untuk perangkat mobile, tablet, maupun desktop menggunakan Tailwind CSS. State Management & Error Handling: Menangani status loading dan memberikan umpan balik visual jika film tidak ditemukan atau terjadi kesalahan jaringan. Keamanan Kredensial: Menggunakan Environment Variables (.env) untuk mengamankan API Key.🛠️ Teknologi yang Digunakan React 18: Library utama untuk membangun antarmuka pengguna berbasis komponen (Functional Components & Hooks). Vite: Build tool modern yang memberikan pengalaman pengembangan super cepat. Tailwind CSS: Utility-first CSS framework untuk proses styling yang cepat dan konsisten. OMDb API: RESTful API pihak ketiga untuk mengambil data dan poster film.",
+            tech: ["HTML", "CSS", "ReactJS",],
+            github: "https://github.com/ilhamrachmadhani/StreamFlix",
+            demo: "https://streamflixid.netlify.app/",
+            image: streamflixImg
+        },
+        {
+            title: "Website Portfolio Pribadi",
+            description: "Selamat datang di repositori Portofolio 2026 saya! 🚀 Saya adalah seorang Software Engineer lulusan Sistem Informasi dengan minat mendalam pada pengembangan aplikasi mobile dan antarmuka web (Frontend). Saya senang memecahkan masalah kompleks melalui kode yang bersih, efisien, dan arsitektur yang terukur. Repositori ini berisi kumpulan proyek, eksplorasi teknologi, dan showcase dari perjalanan saya dalam dunia rekayasa perangkat lunak.",
+            tech: ["HTML", "CSS", "ReactJS",],
+            github: "https://github.com/ilhamrachmadhani/portofolio2026",
+            demo: "#",
+            image: portofolioImg
         },
     ];
 
@@ -59,6 +77,9 @@ const Projects = () => {
                                 <div className="flex items-center gap-4 mt-4">
                                     <a href={project.github} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm font-medium text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors">
                                         <Github className="w-4 h-4" /> Repository
+                                    </a>
+                                    <a href={project.demo} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm font-medium text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors">
+                                        <ExternalLink className="w-4 h-4" /> Demo
                                     </a>
                                 </div>
                             </div>
