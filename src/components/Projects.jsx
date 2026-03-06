@@ -2,11 +2,11 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Github, ExternalLink } from 'lucide-react';
 import { ExpandableCard } from "../components/ui/expandable-card";
-import nutriscanImg from "../assets/nutriscan.png";
-import perpustakaanImg from "../assets/perpustakaan.png";
-import filterWilayahImg from "../assets/filter-wilayah.png";
-import streamflixImg from "../assets/streamflix.png";
-import portofolioImg from "../assets/portfolio.png";
+import nutriscanImg from "../assets/images/nutriscan.png";
+import perpustakaanImg from "../assets/images/perpustakaan.png";
+import filterWilayahImg from "../assets/images/filter-wilayah.png";
+import streamflixImg from "../assets/images/StreamFlix.png";
+import portofolioImg from "../assets/images/portfolio.png";
 
 
 const Projects = () => {
