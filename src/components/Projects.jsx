@@ -7,6 +7,7 @@ import perpustakaanImg from "../assets/images/perpustakaan.png";
 import filterWilayahImg from "../assets/images/filter-wilayah.png";
 import streamflixImg from "../assets/images/StreamFlix.png";
 import portofolioImg from "../assets/images/portfolio.png";
+import recipeApp from  "../assets/images/recipe-app.png";
 
 
 const Projects = () => {
@@ -51,6 +52,15 @@ const Projects = () => {
             demo: "#",
             image: portofolioImg
         },
+        {
+            title: "Aplikasi Resep Makanan",
+            description: "Aplikasi Resep Makanan adalah platform yang memungkinkan pengguna untuk mencari, menyimpan, dan berbagi resep masakan. Dengan antarmuka yang ramah pengguna dan fitur pencarian yang canggih, pengguna dapat dengan mudah menemukan resep berdasarkan bahan, kategori, atau tingkat kesulitan. Aplikasi ini juga menyediakan fitur untuk menambahkan catatan pribadi pada setiap resep dan berbagi resep favorit dengan teman-teman.",
+            tech: ["Kotlin", "MVVM", "Retrofit"],
+            github: "https://github.com/ilhamrachmadhani/Recipe_App",
+            demo: "#",
+            image: recipeApp
+        },
+
     ];
 
     return (
