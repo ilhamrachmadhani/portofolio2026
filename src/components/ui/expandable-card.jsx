@@ -55,24 +55,24 @@ export function ExpandableCard({
         {active && (
           <div
             className={cn(
-              "fixed inset-0 z-[100] grid place-items-center before:pointer-events-none sm:mt-16"
+              "fixed inset-0 z-100 grid place-items-center before:pointer-events-none sm:mt-16"
             )}>
             <motion.div
               layoutId={`card-${title}-${id}`}
               ref={cardRef}
               className={cn(
-                "relative flex h-full w-full max-w-[850px] flex-col overflow-auto bg-white shadow-sm [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch] [scrollbar-width:none] sm:rounded-t-3xl dark:bg-zinc-900 dark:shadow-none",
+                "relative flex h-full w-full max-w-212.5 flex-col overflow-auto bg-white shadow-sm [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch] [scrollbar-width:none] sm:rounded-t-3xl dark:bg-zinc-900 dark:shadow-none",
                 classNameExpanded
               )}
               {...props}>
               <motion.div layoutId={`image-${title}-${id}`}>
                 <div
-                  className="relative before:pointer-events-none before:absolute before:inset-x-0 before:bottom-[-1px] before:z-50 before:h-[70px] before:bg-gradient-to-t before:from-white dark:before:from-zinc-900">
+                  className="relative before:pointer-events-none before:absolute before:inset-x-0 before:-bottom-px before:z-50 before:h-17.5 before:bg-linear-to-t before:from-white dark:before:from-zinc-900">
                   <img src={src} alt={title} className="h-80 w-full object-cover object-center" />
                 </div>
               </motion.div>
               <div
-                className="relative h-full before:pointer-events-none before:fixed before:inset-x-0 before:bottom-0 before:z-50 before:h-[70px] before:bg-gradient-to-t before:from-white dark:before:from-zinc-900">
+                className="relative h-full before:pointer-events-none before:fixed before:inset-x-0 before:bottom-0 before:z-50 before:h-17.5 before:bg-linear-to-t before:from-white dark:before:from-zinc-900">
                 <div className="flex h-auto items-start justify-between p-8">
                   <div>
                     <motion.p
