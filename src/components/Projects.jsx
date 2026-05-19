@@ -8,6 +8,7 @@ import filterWilayahImg from "../assets/images/filter-wilayah.png";
 import streamflixImg from "../assets/images/StreamFlix.png";
 import portofolioImg from "../assets/images/portfolio.png";
 import recipeApp from  "../assets/images/recipe-app.png";
+import testingRecipeApp from "../assets/images/QA-App-Recipe.jpeg";
 
 
 const Projects = () => {
@@ -60,6 +61,14 @@ const Projects = () => {
             demo: "#",
             image: recipeApp
         },
+        {
+            title: "Testing Recipe App dengan Katalon",
+            description: "Automasi pengujian aplikasi Android (Recipe-app) menggunakan Emulator untuk memvalidasi fungsi-fungsi utama aplikasi mobile. Pengujian dikembangkan secara manual tanpa bantuan fitur perekam untuk menghasilkan arsitektur kode pengujian yang bersih.",
+            tech: ["Katalon Mobile Studio", "Appium v2.x", "UiAutomator2 Driver", "Android SDK"],
+            github: "https://github.com/ilhamrachmadhani/QA-Recipe-App.git",
+            demo: "#",
+            image: testingRecipeApp
+        },
 
     ];
 
@@ -71,6 +80,7 @@ const Projects = () => {
                         Selected Works
                     </h2>
                 </div>
+            
 
                 <div className="md:col-span-8 grid grid-cols-2 gap-4">
                     {projects.map((project, index) => (
