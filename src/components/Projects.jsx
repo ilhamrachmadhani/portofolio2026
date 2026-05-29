@@ -9,7 +9,7 @@ import streamflixImg from "../assets/images/StreamFlix.png";
 import portofolioImg from "../assets/images/portfolio.png";
 import recipeApp from  "../assets/images/recipe-app.png";
 import testingRecipeApp from "../assets/images/QA-App-Recipe.jpeg";
-import testingLibraryApp from "../assets/images/QA-Library-App.jpeg";
+import testingLibraryApp from "../assets/images/QA-Library-App.png";
 
 
 const Projects = () => {
