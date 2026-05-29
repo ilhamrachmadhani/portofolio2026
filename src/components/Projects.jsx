@@ -9,6 +9,7 @@ import streamflixImg from "../assets/images/StreamFlix.png";
 import portofolioImg from "../assets/images/portfolio.png";
 import recipeApp from  "../assets/images/recipe-app.png";
 import testingRecipeApp from "../assets/images/QA-App-Recipe.jpeg";
+import testingLibraryApp from "../assets/images/QA-Library-App.jpeg";
 
 
 const Projects = () => {
@@ -68,6 +69,14 @@ const Projects = () => {
             github: "https://github.com/ilhamrachmadhani/QA-Recipe-App.git",
             demo: "#",
             image: testingRecipeApp
+        },
+        {
+            title: "Testing Library App dengan Katalon",
+            description: "Automasi pengujian aplikasi Android (Library-app) menggunakan Emulator untuk memvalidasi fungsi-fungsi utama aplikasi mobile. Pengujian dikembangkan secara manual tanpa bantuan fitur perekam untuk menghasilkan arsitektur kode pengujian yang bersih.",
+            tech: ["Katalon Mobile Studio", "Appium v2.x", "UiAutomator2 Driver", "Android SDK"],
+            github: "https://github.com/ilhamrachmadhani/QA-Library-Apps.git",
+            demo: "#",
+            image: testingLibraryApp
         },
 
     ];
